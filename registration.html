@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Admission</title>
+<link rel="stylesheet" href="css/registration.css">
+</head>
+<body>
+<div class="header">
+<div class="container">
+ <b> NEWS :</b>
+ <marquee>
+ CONGRATULATIONS, SPA, coaches, and journalists of THE SCEPTER and THE DIADEM!
+ </marquee>
+</div>
+</div>
+
+<div class="container">
+<img src="images/princeton-science-school-logo.png" class="logo">
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about-us.html">About us</a>
+<a href="registration.html">Online Admission</a>
+</nav>
+</div>
+<center>
+<i>
+<br>
+ <h4> All fields are required, but if the information is not
+ <br>
+  available you can input "-" or "n/a".
+ <br>
+ By providing the personal data below, the student agrees that the same shall be used by the university, solely for educational purposes. In no case shall the data provided be disclosed except to partner organizations in compliance with contractual obligations or pursuant to law. Finally, it is understood that the personal details provided below may be used to assess student life.
+ <br>
+ </h4>
+ </i>
+<br>
+<h2 style="color:black;">Personal Data Form </h2>
+<br>
+<select name="studentAge" class="form-control" id="studentAge" onchange="if (!window.__cfRLUnblockHandlers) return false; showOldStudentInfo(this.value);" required="">
+		<option value="">Select student classification</option>
+		<option value="old">Old</option>
+		<option value="new">New</option>
+	</select>
+	<br>
+	<select name="schoolYr" class="form-control" required="">
+		<option value="">Select academic year</option>
+		<option value="2022">2022-2023</option>
+		<option value="2023">2023-2024</option>
+		<option value="2024" selected="">2024-2025</option>
+
+	</select>
+	<br>
+	<select name="type_1" class="form-control" id="stype3" onchange="if (!window.__cfRLUnblockHandlers) return false; typeOfStudentAddInputs(this.value);" required="">
+		<option value="">--Select type of student--</option>
+		<option value="JH">Junior High</option>
+		<option value="SHS">Grade 1-6</option>
+		<option value="College">NKP</option>
+
+	</select>
+	<br>
+	<select name="type" class="form-control" id="stype4" onchange="if (!window.__cfRLUnblockHandlers) return false; typeOfStudentAddInputs(this.value);" required="">
+		<option value="">--Select--</option>
+		<option value="freshman">Freshman</option>
+		<option value="transferee">Transferees</option>
+		<option value="returnee">Returnee</option>
+		<option value="foreign">Foreign Student</option>
+		<option value="cross_enrollee">Cross enrollee</option>
+	</select>
+	</br>
+	<br>
+ <h2 style="color:black;">Personal Information </h2>
+ <br>
+ <div class="col col-lg-6">
+
+	<label>Last name</label>
+	<input type="text" name="last_name" class="form-control" required=""> <br>
+	<label>First name</label>
+	<input type="text" name="first_name" class="form-control" required=""> <br>
+	<label>Middle name</label>
+	<input type="text" name="middle_name" class="form-control" required=""> <br>
+
+
+<br>
+	<label>Birthdate (YYYY/MM/DD)</label> 
+	<input type="text" name="birth_date" id="birthdate" class="form-control hasDatepicker" placeholder="YYYY/MM/DD" required="">
+
+<br>
+	<label>Sex</label> 
+	<select name="gender" class="form-control" required="">
+		<option value="male">Male</option>
+		<option value="female">Female</option>
+	</select>
+	
+<br>
+	<label>Religion</label>
+	<input type="text" name="religion" class="form-control" value="Roman Catholic"> <br>
+
+	<label>Civil status</label>
+	<select name="civil_status" class="form-control"> <br>
+		<option value="single">Single</option>
+		<option value="annulled">Annulled</option>
+		<option value="married">Married</option>
+		<option value="widowed">Widowed</option>
+	</select>
+
+	<label>Nationality</label>
+	<input type="text" name="nationality" class="form-control" value="Filipino"> <br>
+
+	<label>Place of birth</label>
+	<textarea name="birth_place" class="form-control"></textarea> <br>
+
+
+    <label>Are you a member of an Indigenous Peoples Group?</label> <br>
+    <select class="form-control" name="is_member_ipg">
+		<option value="0">No</option>
+        <option value="1">Yes</option>
+    </select>
+    <label>If yes, what group?</label>
+    <input type="text" name="ipg_gname" class="form-control"> <br>
+
+
+    <label>Are you a person with disability (PWD)?</label> 
+    <select class="form-control" name="is_disable"> <br>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select>
+    <label>If yes, what is your disability?</label>
+    <input type="text" name="disability" class="form-control"> <br>
+
+    <label>Please specify the year you acquired the status:</label>
+    <input type="text" name="year_acq_stat" class="form-control">
+
+    <label>Are you on regular medication?</label>
+    <select class="form-control" name="medical_con">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select>
+	
+	<div class="col col-lg-6">
+	<label>Age</label>
+	<input type="text" name="age" class="form-control"> <br>
+	</select>
+
+ <br>
+	<h2 style="color:black;">Complete Address </h2>
+	<label>Region</label>
+
+	<div id="region">
+		<select name="region" id="region" class="form-control" onchange="if (!window.__cfRLUnblockHandlers) return false; showProvinces(this.value)">
+			<option value="">--Select--</option>
+							<option value="0100000000">Region I (Ilocos Region)</option>
+							<option value="0200000000">Region II (Cagayan Valley)</option>
+							<option value="0300000000">Region III (Central Luzon)</option>
+							<option value="0400000000">Region IV-A (CALABARZON)</option>
+							<option value="1700000000">MIMAROPA Region</option>
+							<option value="0500000000">Region V (Bicol Region)</option>
+							<option value="0600000000">Region VI (Western Visayas)</option>
+							<option value="0700000000">Region VII (Central Visayas)</option>
+							<option value="0800000000">Region VIII (Eastern Visayas)</option>
+							<option value="0900000000">Region IX (Zamboanga Peninsula)</option>
+							<option value="1000000000">Region X (Northern Mindanao)</option>
+							<option value="1100000000">Region XI (Davao Region)</option>
+							<option value="1200000000">Region XII (SOCCSKSARGEN)</option>
+							<option value="1300000000">National Capital Region (NCR)</option>
+							<option value="1400000000">Cordillera Administrative Region (CAR)</option>
+							<option value="1600000000">Region XIII (Caraga)</option>
+							<option value="1900000000">Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)</option>
+					</select>
+	</div>
+
+	<label>Province/City</label>
+		<div id="txtProv">
+			<select class="form-control">
+				<option>--Select--</option>
+			</select>
+		</div>
+
+		<!-- <label>City/Town</label> -->
+
+		<div id="txtMun">
+			<select class="form-control">
+				<option>--Select--</option>
+			</select>
+		</div>
+
+
+		<div class="mb-2" id="txtBrgys">
+			<select class="form-control">
+				<option>--Select--</option>
+			</select>
+		</div>
+		<br>
+
+
+
+	<textarea name="present_address" rows="5" class="form-control" placeholder="Rm. | Flr. | Unit No. &amp; Building, House/Lot &amp; Blk No. Street name" required=""></textarea>
+
+	<!-- <label>Permanent address</label> <br>
+	<textarea name="permanent_address" rows="5" class="form-control" placeholder="Rm. | Flr. | Unit No. & Building, House/Lot & Blk No. Street name Brgy/District/Locality, Subd, City/Municipality, Province" required></textarea> --> <br>
+
+	<label>Mobile no.</label>
+	<input type="text" name="mob_no" class="form-control" required=""> <br>
+
+    <label>Telephone no.</label>
+    <input type="text" name="tel_no" class="form-control"> <br>
+
+	<label>Email</label>
+	<input type="email" name="email" class="form-control" value=""> <br>
+	<small>Please provide a valid email address.</small><br>
+
+	<label>Residence</label>
+	<select name="residence" class="form-control">
+		<option value="parents">With parents</option>
+		<option value="relatives">With relatives</option>
+		<option value="boarding">Boarding</option>
+		<option value="others">Others</option>
+	</select>
+
+    <input type="text" name="oth_residence" class="form-control" placeholder="Please Specify"> <br>
+    <label>Employer</label>
+    <input type="text" name="app_employer" class="form-control"> <br>
+    <label>Employer Address</label>
+    <input type="text" name="app_employer_address" class="form-control"> <br>
+
+    <label>Occupation</label>
+    <input type="text" name="app_occu" class="form-control"> <br>
+
+    <label>What special assistance does your condition require?</label>
+    <input type="text" name="require_sa_2" class="form-control"> <br>
+    <label>Are you a gifted child?</label>
+    <select class="form-control" name="is_gifted">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select>
+
+    <label>If yes, what are the details of your medical condition?</label>
+    <input type="text" name="details_med_con" class="form-control"> <br>
+
+    <label>Do you require special assistance?</label>
+    <select class="form-control" name="require_sa">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select>
+	
+ </div>
+ <br>
+ <div class="pull-right">
+
+		<button type="submit" name="submitForm" id="submitForm" class="btn btn-primary"><span class="fa fa-sign-in"></span> Register</button>
+
+		<button type="reset" class="btn btn-danger"><span class="fa fa-refresh"></span> Reset</button>
+
+	</div> 
+
+</div>
+	
+	</center>
+</body>
+</html>
